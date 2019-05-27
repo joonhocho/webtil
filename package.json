@@ -1,0 +1,49 @@
+{
+  "name": "webinfo",
+  "version": "0.0.1",
+  "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json && tscpaths -p ./tsconfig.json -s ./src -o ./lib",
+    "clear": "rm -rf ./lib ./coverage",
+    "format": "prettier --write \"./*.{js,jsx,ts,tsx}\" \"./src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "tslint -c ./tslint.json \"src/**/*\"",
+    "lint:fix": "tslint --fix -c ./tslint.json \"src/**/*\"",
+    "prepublish": "yarn start",
+    "reinstall": "rm -rf ./node_modules yarn.lock && yarn",
+    "start": "yarn clear && yarn format && yarn lint:fix && yarn test && yarn build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonhocho/webinfo.git"
+  },
+  "keywords": [
+    "Browser Information",
+    "Utility Functions",
+    "TypeScript",
+    "Library"
+  ],
+  "author": "Joon Ho Cho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joonhocho/webinfo/issues"
+  },
+  "homepage": "https://github.com/joonhocho/webinfo#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^12.0.2",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tscpaths": "^0.0.9",
+    "tslint": "^5.14.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.4000"
+  },
+  "dependencies": {}
+}
