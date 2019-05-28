@@ -1,6 +1,10 @@
-import { isOrContainedByNodeName } from './isOrContainedByNodeName';
+import { INode, isOrContainedByNodeName } from './isOrContainedByNodeName';
 
-export const isAnchorEvent = ({ target }: Event): boolean =>
+export interface IEvent {
+  target?: INode | null;
+}
+
+export const isAnchorEvent = ({ target }: IEvent): boolean =>
   target != null &&
-  (target as Node).nodeName != null &&
-  isOrContainedByNodeName(target as Node, 'A');
+  target.nodeName != null &&
+  isOrContainedByNodeName(target, 'A');

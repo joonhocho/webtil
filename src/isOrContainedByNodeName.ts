@@ -1,5 +1,10 @@
+export interface INode {
+  nodeName?: string;
+  parentNode?: INode;
+}
+
 export const isOrContainedByNodeName = (
-  node: Node | null | undefined,
+  node: INode | null | undefined,
   nodeName: string
 ): boolean => {
   let currentNode = node;
