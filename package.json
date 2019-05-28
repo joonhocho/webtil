@@ -2,8 +2,8 @@
   "name": "webinfo",
   "version": "0.0.4",
   "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "es5/index.js",
+  "types": "es5/index.d.ts",
   "scripts": {
     "all": "yarn clean && yarn format && yarn lint:fix && yarn test && yarn build && yarn build:es5",
     "build": "tsc -p ./tsconfig.json && tscpaths -p ./tsconfig.json -s ./src -o ./lib",
