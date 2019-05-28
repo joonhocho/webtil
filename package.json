@@ -1,6 +1,6 @@
 {
   "name": "webtil",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
   "main": "es5/index.js",
   "types": "es5/index.d.ts",
@@ -50,5 +50,8 @@
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
+  },
+  "dependencies": {
+    "ts-jutil": "^0.0.43"
   }
 }
