@@ -1,3 +1,3 @@
-# webinfo
+# webtil
 
-Tiny functions for getting information about browser / navigator
+Tiny utility library functions to be used in browser written in TypeScript
