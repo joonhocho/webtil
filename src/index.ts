@@ -1,3 +1,5 @@
+export * from './StorageWrapper';
+export * from './WindowResizeEmitter';
 export * from './discardFilePreview';
 export * from './getBlobFromCanvas';
 export * from './getDevicePixelRatio';
@@ -5,6 +7,7 @@ export * from './getLanguages';
 export * from './getReferrer';
 export * from './getScreenSize';
 export * from './getUserAgent';
+export * from './getWindowSize';
 export * from './isAnchorEvent';
 export * from './isOrContainedByNodeName';
 export * from './requestAnimationFrame';
