@@ -1,3 +1,6 @@
+import { filter, map } from 'ts-jutil/es5/array';
+import { trim } from 'ts-jutil/es5/string';
+
 interface INavigator {
   readonly language?: string;
   readonly languages?: readonly string[];
@@ -15,11 +18,14 @@ export const getLanguages = (): string[] => {
     } = navigator as INavigator;
 
     if (languages) {
-      return [...languages];
+      return filter(
+        map(languages.concat(), trim),
+        (x) => x && typeof x === 'string'
+      );
     }
 
     const lang = language || userLanguage || browserLanguage;
-    if (lang) {
+    if (lang && typeof lang === 'string') {
       return [lang];
     }
   }
