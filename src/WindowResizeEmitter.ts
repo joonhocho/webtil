@@ -58,29 +58,27 @@ export class WindowResizeEmitter<R = void | Promise<void>> extends Emitter<
   }
 
   private run(): Promise<void> {
-    return new Promise(
-      (resolve, reject): void => {
-        requestAnimationFrame(async () => {
-          try {
-            const size = getWindowSize();
-            if (size) {
-              const { prevSize } = this;
-              await Promise.all(
-                this.emitGet({
-                  width: size.width,
-                  height: size.height,
-                  prevWidth: prevSize && prevSize.width,
-                  prevHeight: prevSize && prevSize.height,
-                })
-              );
-              this.prevSize = size;
-            }
-            resolve();
-          } catch (e) {
-            reject();
+    return new Promise((resolve, reject): void => {
+      requestAnimationFrame(async () => {
+        try {
+          const size = getWindowSize();
+          if (size) {
+            const { prevSize } = this;
+            await Promise.all(
+              this.emitGet({
+                width: size.width,
+                height: size.height,
+                prevWidth: prevSize && prevSize.width,
+                prevHeight: prevSize && prevSize.height,
+              })
+            );
+            this.prevSize = size;
           }
-        });
-      }
-    );
+          resolve();
+        } catch (e) {
+          reject();
+        }
+      });
+    });
   }
 }

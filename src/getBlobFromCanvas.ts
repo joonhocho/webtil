@@ -20,14 +20,12 @@ export const getBlobFromCanvas = (
   canvas: HTMLCanvasElement,
   contentType: string
 ): Promise<Blob> =>
-  new Promise(
-    (resolve, reject): void => {
-      getBlobFromCanvasWithCallback(canvas, contentType, (err, blob) => {
-        if (blob) {
-          resolve(blob);
-        } else {
-          reject(err);
-        }
-      });
-    }
-  );
+  new Promise((resolve, reject): void => {
+    getBlobFromCanvasWithCallback(canvas, contentType, (err, blob) => {
+      if (blob) {
+        resolve(blob);
+      } else {
+        reject(err);
+      }
+    });
+  });
