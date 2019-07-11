@@ -1,5 +1,6 @@
-import { filter, map } from 'ts-jutil/dist/browser/array';
-import { trim } from 'ts-jutil/dist/browser/string';
+import { filter } from 'ts-jutil/dist/browser/array/filter';
+import { map } from 'ts-jutil/dist/browser/array/map';
+import { trim } from 'ts-jutil/dist/browser/string/trim';
 
 interface INavigator {
   readonly language?: string;
