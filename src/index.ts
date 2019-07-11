@@ -1,13 +1,21 @@
-export * from './StorageWrapper';
-export * from './WindowResizeEmitter';
-export * from './discardFilePreview';
-export * from './getBlobFromCanvas';
-export * from './getDevicePixelRatio';
-export * from './getLanguages';
-export * from './getReferrer';
-export * from './getScreenSize';
-export * from './getUserAgent';
-export * from './getWindowSize';
-export * from './isAnchorEvent';
-export * from './isOrContainedByNodeName';
-export * from './requestAnimationFrame';
+export { IFile, discardFilePreview } from './discardFilePreview';
+export {
+  getBlobFromCanvas,
+  getBlobFromCanvasWithCallback,
+} from './getBlobFromCanvas';
+export { getDevicePixelRatio } from './getDevicePixelRatio';
+export { getLanguages } from './getLanguages';
+export { getReferrer } from './getReferrer';
+export { getScreenSize } from './getScreenSize';
+export { getUserAgent } from './getUserAgent';
+export { IWindowSize, getWindowSize } from './getWindowSize';
+export { IEvent, isAnchorEvent } from './isAnchorEvent';
+export { INode, isOrContainedByNodeName } from './isOrContainedByNodeName';
+export { requestAnimationFrame } from './requestAnimationFrame';
+export { StorageWrapper } from './StorageWrapper';
+export {
+  IWindowSizeEvent,
+  WindowResizeEmitter,
+  defaultHeight,
+  defaultWidth,
+} from './WindowResizeEmitter';
