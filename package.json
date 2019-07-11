@@ -1,6 +1,6 @@
 {
   "name": "webtil",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
   "module": "lib/index.js",
   "main": "dist/node/index.js",
