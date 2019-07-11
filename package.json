@@ -1,11 +1,28 @@
 {
   "name": "webtil",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
+  "keywords": [
+    "Browser Information",
+    "Utility Functions",
+    "TypeScript",
+    "Library"
+  ],
+  "author": "Joon Ho Cho",
+  "license": "MIT",
+  "homepage": "https://github.com/joonhocho/webtil#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joonhocho/webtil.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joonhocho/webtil/issues"
+  },
   "module": "lib/index.js",
   "main": "dist/node/index.js",
   "browser": "dist/browser/index.js",
   "types": "lib/index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "all": "npm run clean && npm run format && npm run lint:fix && npm run build:all && npm run test",
     "build:all": "npm run build:module && npm run build:node && npm run build:browser",
@@ -26,24 +43,11 @@
     "test:watch": "jest --watch"
   },
   "pre-commit": "precommit",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joonhocho/webtil.git"
-  },
-  "keywords": [
-    "Browser Information",
-    "Utility Functions",
-    "TypeScript",
-    "Library"
-  ],
-  "author": "Joon Ho Cho",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/joonhocho/webtil/issues"
-  },
-  "homepage": "https://github.com/joonhocho/webtil#readme",
   "dependencies": {
-    "ts-jutil": "^1.0.5"
+    "ts-jutil": "^1.0.9"
+  },
+  "peerDependencies": {
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.15",
@@ -58,9 +62,6 @@
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.5.3"
-  },
-  "peerDependencies": {
-    "tslib": "^1.10.0"
   },
   "engines": {
     "node": ">=8.0.0"
