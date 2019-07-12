@@ -1,5 +1,4 @@
-import { Emitter } from 'ts-jutil/dist/browser/Emitter';
-import { UpdateRunner } from 'ts-jutil/dist/browser/UpdateRunner';
+import { Emitter, UpdateRunner } from 'ts-jutil';
 import { getWindowSize, IWindowSize } from './getWindowSize';
 import { requestAnimationFrame } from './requestAnimationFrame';
 
