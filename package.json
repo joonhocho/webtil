@@ -1,6 +1,6 @@
 {
   "name": "webtil",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "Tiny browser functions for getting information about browser / navigator written in TypeScript",
   "keywords": [
     "Browser Information",

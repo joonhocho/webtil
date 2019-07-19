@@ -1,4 +1,4 @@
-export const findParentOrSelf = <T extends Node = Node>(
+export const findParentNodeOrSelf = <T extends Node = Node>(
   e: Node,
   match: (e: Node) => boolean
 ): T | undefined => {
