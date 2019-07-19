@@ -1,3 +1,5 @@
+export { containsNode } from './dom/containsNode';
+export { findParentOrSelf } from './dom/findParentOrSelf';
 export { IFile, discardFilePreview } from './discardFilePreview';
 export {
   getBlobFromCanvas,
